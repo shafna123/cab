@@ -1,0 +1,23 @@
+<html>
+    <head>
+    <title> Print</title></head>
+    <body> 
+        Submitted details:
+        <input type="submit" name="btnshow" value="Show Data" onclick="javascript:showData();"/>
+        First Name:<label id="lblFirstname" ></label>
+
+        Welcome <span id="fullName"></span> ! Your address is <span id="address"></span>
+        <script>
+            function showData(){
+                // var submittedData = localStorage.getItem('formData');
+                var firstname = localStorage.getItem('firstname');
+                var lastname = localStorage.getItem('lastname');
+                var address = localStorage.getItem('address');
+                console.log(firstname);
+                document.getElementById('fullName').innerHTML = firstname+" "+lastname;
+                document.getElementById('address').innerHTML = address;
+                document.getElementById('lblFirstname').innerHTML = firstname;
+            }
+        </script>
+    </body>
+</html> 
