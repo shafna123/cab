@@ -1,0 +1,180 @@
+<html>
+    <head>
+        <link href="C:\Users\shafna.n\Desktop\CAB MANAGEMENT SERVICE\css\style.css" type="text/class" rel="stylesheet";>
+        <title> CAB BOOKING</title>
+        <!--style type="text/css">
+        
+                        label{
+                color:brown;
+            }
+            .tab1{
+                border: 2px solid #cc0000;
+            }
+            .tab2{
+                border: 3px solid goldenrod;
+            }
+           
+        </style>--> 
+        </head>
+        <body bgcolor="sky blue">
+            
+            <h1>BOOK YOUR CAB</h1>
+            <a href="index.html"title= "Home Page">Go back to home page</a>
+            <h1 style=color:white;">S CABS</h1><table>
+                <tr>
+                    <td><input type ="text" placeholder="which cab do you want" lenght="8px" width="5 px"></td>
+                    <td><button style="background-color:yellowgreen">search</button></td>
+                        
+                </tr>
+            </table>
+            </div>
+        
+    
+            <table>
+
+                <tr>
+                    <th>Cab name</th>
+
+                  
+                    <th>price</th>
+
+                </tr>
+                <tr>
+                    <td>CAR</td>
+                    <td>3000</td>
+
+                <td><a href="error.html">BOOK NOW</a></td>
+                </tr>
+                <tr> 
+                    <td>AUTO</td>
+                    <td>2000</td>
+
+                    <td><a href="error.html">BOOK NOW</a></td>
+                </tr>
+            </table>
+           
+              
+            <!-- booking form start-->
+            <form action="print.html" method="post">
+                <table class="tab1" cellspacing="6" cellpadding="2">
+                    <tr>
+                        <td class="tab1">
+                            <label for="title">Title</label>
+                        </td><td>
+                            <select id="title" name="title" multiple>
+                                <option value="1">Mr</option>
+                                <option value="2">Mrs</option>
+                                <option value="3">Ms</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                    <td class="tab2">
+                    <label for="firstname">first name:</label>
+                    </td>
+                    <td>
+                    <input type="text" id="firstname" name="firstname" placeholder="Your firstname">
+
+                    </td></tr>
+                    <tr>
+                    <td>
+                    <label for="lastname">last name:</label>
+                    </td>
+                    <td>
+                    <input type="text" id="lastname" name="lastname" placeholder="Your lastname">
+
+                    </td></tr>
+                    <td>
+                    <label for="address"> Address:</label>
+                    </td>
+                    <td>
+                    <textarea id="address" name="address"
+                    placeholder="Your address" rows="6" cols="20" ></textarea>
+                    </td>  </tr><tr>
+                        <td>
+                        <label for="title">city</label>
+                        </td><td>
+                            <select id="title" name="city" multiple>
+                                <option value="1">palakkad</option>
+                                <option value="2">kochi</option>
+                                <option value="3">tvm</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                    <td>
+                    <label for="dob">Date of birth:</label>
+                    </td>
+                    <td> 
+                    <input type="date" id="dob" name="dob" placeholder="Your Date of birth">
+                    </td></tr>
+                    <tr>
+                        <td>
+                            <label for="gender">Gender:</label>
+                        </td><td>
+                            <input type="radio" id="Male" name="gender" value="1" /> Male
+                            <input type="radio" id="Female" name="gender" value="2" /> Female
+                        </td>
+                    </tr><tr>
+                        <td>
+                            <label for="Can we contact you">Can we contact you?:</label>
+                        </td><td>
+                            <input type="radio" id="Yes" name="Can we contact you" value="1" /> Yes
+                            <input type="radio" id="No" name="Can we contact you" value="2" /> No
+                        </td>
+                    </tr><tr><td>
+                        <label for="mobile "> Mobile:</label>
+                    </td>
+                        <td>
+                        <textarea id="Mobile" name="mobile"
+                        placeholder="Your mobile number" rows="5" cols="10" ></textarea>
+                    </td></tr>
+                    <tr>
+                        <td><label for="Communication preference">Communication preference:</label>
+
+                        </td><td> <input type="checkbox" id="Email" name="Communication preference" value="1" />Email
+                        <input type="checkbox" id="SMS" name="Communication preference" value="2" /> SMS
+
+                        </td>
+                    </tr><tr>
+                        <td>
+                            <input type="checkbox" />
+                        
+                            <label for="i agree to the terms and conditions of the website">i agree to the terms and conditions the website</label>
+                        </td>
+                    </tr><tr>
+                        <td>
+                            <label for="photo">Photo</label>
+                        </td><td>
+                            <input type="file" id="photofile" accept="image/*,*.pdf"/>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <input type="submit" onclick="javascript:saveData();" id="submit" />
+                    
+                        </td><td>
+                            <input type="reset" id="reset" name="reset" value="Reset"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+             
+            <!--form end-->
+            <script>
+                function saveData(){
+                    debugger
+               var firstname= document.getElementById('firstname').value;
+               var address=document.getElementById('address').value;
+               var lastname=document.getElementById('lastname').value;
+
+               localStorage.setItem('firstname',firstname);
+               localStorage.setItem('lastname',lastname);
+               localStorage.setItem('address',address);
+
+                }
+            </script>
+        </body>
+    </head>
+</html> 
